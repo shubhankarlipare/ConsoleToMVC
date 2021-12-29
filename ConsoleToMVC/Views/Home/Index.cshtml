@@ -1,39 +1,23 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body class="container">
-    <img src="~/images/logo.png" />
-    @{
-        var list = new List<int>() { 1, 2, 3, 4, 5, 6 };
-    }
+<img src="~/images/logo.png" />
+@{
+    var list = new List<int>() { 1, 2, 3, 4, 5, 6 };
+}
 
-    @foreach (var item in list)
+@foreach (var item in list)
+{
+    if (item == 2)
     {
-        if (item == 2)
-        {
-            <h1>@item Runtime </h1>
-        }
-        else
-        {
-            <h1 class="h1">Hello world</h1>
-        }
+        <h1>@item Runtime </h1>
     }
+    else
+    {
+        <h1 class="h1">Hello world</h1>
+    }
+}
 
-</body>
-<script src="~/lib/jquery/jquery.js"></script>
-</html>
-
-<script>
-    $(document).ready(function () {
-        alert("Page Loaded");
-    });
-</script>

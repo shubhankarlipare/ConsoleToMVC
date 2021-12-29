@@ -19,7 +19,7 @@ namespace ConsoleToMVC.Controllers
         public ViewResult GetAllBooks()
         {
             var data = _bookRepository.GetAllBooks();
-            return View();
+            return View(data);
             //return "Get all Books";
         }
 

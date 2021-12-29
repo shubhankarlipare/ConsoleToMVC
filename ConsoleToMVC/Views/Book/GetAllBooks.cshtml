@@ -1,16 +1,20 @@
-﻿
+﻿@using ConsoleToMVC.Models
+@model IEnumerable<BookModel>
+
+
+@*@model IEnumerable<ConsoleToMVC.Models.BookModel>
+*@
+
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GetAllBooks</title>
-</head>
-<body>
-    <h1>Get All Books </h1>
-</body>
-</html>
+<h1 class="h-100">Get All Books </h1>
+
+@foreach (var book in Model)
+{
+    <h2 class="h-25">Book Title- @book.Title</h2>
+    <h2 class="h-25">Book Id- @book.Id</h2>
+    <h2 class="h-25">Book Author- @book.Author</h2>
+}
