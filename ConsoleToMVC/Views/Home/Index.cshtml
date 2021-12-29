@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
-<body>
+<body class="container">
     <img src="~/images/logo.png" />
     @{
         var list = new List<int>() { 1, 2, 3, 4, 5, 6 };
@@ -24,9 +24,16 @@
         }
         else
         {
-            <h1>Hello world</h1>
+            <h1 class="h1">Hello world</h1>
         }
     }
 
 </body>
+<script src="~/lib/jquery/jquery.js"></script>
 </html>
+
+<script>
+    $(document).ready(function () {
+        alert("Page Loaded");
+    });
+</script>
